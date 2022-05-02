@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "61625da7-5a9a-4ea0-9bcd-3847744805f5",
+		"name": "posts - heroku (week4)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "取得所有貼文",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://intense-escarpment-13547.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"intense-escarpment-13547",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增貼文",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"626dff7421efaaf90fdb376b\",\r\n    \"title\": \"發現神秘洞窟\",\r\n    \"content\": \"徵求冒險夥伴\",\r\n    \"imgUrl\": \"\",\r\n    \"tag\": \"新聞\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://intense-escarpment-13547.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"intense-escarpment-13547",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增會員",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"阿寶\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"avatarUrl\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://intense-escarpment-13547.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"intense-escarpment-13547",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除所有貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://intense-escarpment-13547.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"intense-escarpment-13547",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除一筆貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://intense-escarpment-13547.herokuapp.com/posts/626e5a357b9103d959bafe46",
+					"protocol": "https",
+					"host": [
+						"intense-escarpment-13547",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"626e5a357b9103d959bafe46"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯一筆貼文",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tag\": \"心情\",\r\n    \"title\": \"明天要去墾丁\",\r\n    \"content\": \"記得擦防曬\",\r\n    \"imgUrl\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://intense-escarpment-13547.herokuapp.com/posts/626e5a197b9103d959bafe43",
+					"protocol": "https",
+					"host": [
+						"intense-escarpment-13547",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"626e5a197b9103d959bafe43"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
