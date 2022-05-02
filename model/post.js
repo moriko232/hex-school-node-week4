@@ -1,9 +1,14 @@
 const mongoose = require("mongoose");
 const postSchema = new mongoose.Schema(
   {
-    userName: {
-      type: String,
-      required: [true, "名字必填"],
+    // userId: {
+    //   type: String,
+    //   required: [true, "ID必填"],
+    // },
+    userData: {
+      type: mongoose.Schema.ObjectId,
+      ref: "user", // id要去找user的那張表的ID
+      required: [true, "ID需要填寫"],
     },
     title: {
       type: String,
@@ -24,7 +29,6 @@ const postSchema = new mongoose.Schema(
     likes: {
       type: Number,
       default: 0,
-      default: ""
     },
     comments: {
       type: Number,
@@ -32,11 +36,10 @@ const postSchema = new mongoose.Schema(
     },
     createAt: {
       type: Date,
-      default: Date.now,
-      select: false,
+      default: Date.now
     },
   },
-  { versionKey: false }
+  { versionKey: false } //  Mongoose 檔案的內部修訂號。
 );
 const Post = mongoose.model("post", postSchema);
 
